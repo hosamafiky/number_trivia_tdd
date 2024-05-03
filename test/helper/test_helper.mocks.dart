@@ -13,16 +13,11 @@ import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i13;
 import 'package:number_trivia_tdd/core/error/failures.dart' as _i7;
 import 'package:number_trivia_tdd/core/platform/network_info.dart' as _i11;
-import 'package:number_trivia_tdd/features/number_trivia/data/datasources/number_trivia_local_datasource.dart'
-    as _i10;
-import 'package:number_trivia_tdd/features/number_trivia/data/datasources/number_trivia_remote_datasource.dart'
-    as _i9;
-import 'package:number_trivia_tdd/features/number_trivia/data/models/number_trivia_model.dart'
-    as _i3;
-import 'package:number_trivia_tdd/features/number_trivia/domain/entities/number_trivia.dart'
-    as _i8;
-import 'package:number_trivia_tdd/features/number_trivia/domain/repositories/number_trivia_repository.dart'
-    as _i5;
+import 'package:number_trivia_tdd/features/number_trivia/data/datasources/number_trivia_local_datasource.dart' as _i10;
+import 'package:number_trivia_tdd/features/number_trivia/data/datasources/number_trivia_remote_datasource.dart' as _i9;
+import 'package:number_trivia_tdd/features/number_trivia/data/models/number_trivia_model.dart' as _i3;
+import 'package:number_trivia_tdd/features/number_trivia/domain/entities/number_trivia.dart' as _i8;
+import 'package:number_trivia_tdd/features/number_trivia/domain/repositories/number_trivia_repository.dart' as _i5;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -47,8 +42,7 @@ class _FakeEither_0<L, R> extends _i1.SmartFake implements _i2.Either<L, R> {
         );
 }
 
-class _FakeNumberTriviaModel_1 extends _i1.SmartFake
-    implements _i3.NumberTriviaModel {
+class _FakeNumberTriviaModel_1 extends _i1.SmartFake implements _i3.NumberTriviaModel {
   _FakeNumberTriviaModel_1(
     Object parent,
     Invocation parentInvocation,
@@ -68,8 +62,7 @@ class _FakeResponse_2 extends _i1.SmartFake implements _i4.Response {
         );
 }
 
-class _FakeStreamedResponse_3 extends _i1.SmartFake
-    implements _i4.StreamedResponse {
+class _FakeStreamedResponse_3 extends _i1.SmartFake implements _i4.StreamedResponse {
   _FakeStreamedResponse_3(
     Object parent,
     Invocation parentInvocation,
@@ -82,23 +75,18 @@ class _FakeStreamedResponse_3 extends _i1.SmartFake
 /// A class which mocks [NumberTriviaRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockNumberTriviaRepository extends _i1.Mock
-    implements _i5.NumberTriviaRepository {
+class MockNumberTriviaRepository extends _i1.Mock implements _i5.NumberTriviaRepository {
   MockNumberTriviaRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>> getConcreteNumberTrivia(
-          int? number) =>
-      (super.noSuchMethod(
+  _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>> getConcreteNumberTrivia(int? number) => (super.noSuchMethod(
         Invocation.method(
           #getConcreteNumberTrivia,
           [number],
         ),
-        returnValue:
-            _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>>.value(
-                _FakeEither_0<_i7.Failure, _i8.NumberTrivia>(
+        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>>.value(_FakeEither_0<_i7.Failure, _i8.NumberTrivia>(
           this,
           Invocation.method(
             #getConcreteNumberTrivia,
@@ -108,42 +96,36 @@ class MockNumberTriviaRepository extends _i1.Mock
       ) as _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>>);
 
   @override
-  _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>>
-      getRandomNumberTrivia() => (super.noSuchMethod(
-            Invocation.method(
-              #getRandomNumberTrivia,
-              [],
-            ),
-            returnValue:
-                _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>>.value(
-                    _FakeEither_0<_i7.Failure, _i8.NumberTrivia>(
-              this,
-              Invocation.method(
-                #getRandomNumberTrivia,
-                [],
-              ),
-            )),
-          ) as _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>>);
+  _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>> getRandomNumberTrivia() => (super.noSuchMethod(
+        Invocation.method(
+          #getRandomNumberTrivia,
+          [],
+        ),
+        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>>.value(_FakeEither_0<_i7.Failure, _i8.NumberTrivia>(
+          this,
+          Invocation.method(
+            #getRandomNumberTrivia,
+            [],
+          ),
+        )),
+      ) as _i6.Future<_i2.Either<_i7.Failure, _i8.NumberTrivia>>);
 }
 
 /// A class which mocks [NumberTriviaRemoteDataSource].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockNumberTriviaRemoteDataSource extends _i1.Mock
-    implements _i9.NumberTriviaRemoteDataSource {
+class MockNumberTriviaRemoteDataSource extends _i1.Mock implements _i9.NumberTriviaRemoteDataSource {
   MockNumberTriviaRemoteDataSource() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i6.Future<_i3.NumberTriviaModel> getConcreteNumberTrivia(int? number) =>
-      (super.noSuchMethod(
+  _i6.Future<_i3.NumberTriviaModel> getConcreteNumberTrivia(int? number) => (super.noSuchMethod(
         Invocation.method(
           #getConcreteNumberTrivia,
           [number],
         ),
-        returnValue:
-            _i6.Future<_i3.NumberTriviaModel>.value(_FakeNumberTriviaModel_1(
+        returnValue: _i6.Future<_i3.NumberTriviaModel>.value(_FakeNumberTriviaModel_1(
           this,
           Invocation.method(
             #getConcreteNumberTrivia,
@@ -153,14 +135,12 @@ class MockNumberTriviaRemoteDataSource extends _i1.Mock
       ) as _i6.Future<_i3.NumberTriviaModel>);
 
   @override
-  _i6.Future<_i3.NumberTriviaModel> getRandomNumberTrivia() =>
-      (super.noSuchMethod(
+  _i6.Future<_i3.NumberTriviaModel> getRandomNumberTrivia() => (super.noSuchMethod(
         Invocation.method(
           #getRandomNumberTrivia,
           [],
         ),
-        returnValue:
-            _i6.Future<_i3.NumberTriviaModel>.value(_FakeNumberTriviaModel_1(
+        returnValue: _i6.Future<_i3.NumberTriviaModel>.value(_FakeNumberTriviaModel_1(
           this,
           Invocation.method(
             #getRandomNumberTrivia,
@@ -173,21 +153,18 @@ class MockNumberTriviaRemoteDataSource extends _i1.Mock
 /// A class which mocks [NumberTriviaLocalDataSource].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockNumberTriviaLocalDataSource extends _i1.Mock
-    implements _i10.NumberTriviaLocalDataSource {
+class MockNumberTriviaLocalDataSource extends _i1.Mock implements _i10.NumberTriviaLocalDataSource {
   MockNumberTriviaLocalDataSource() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i6.Future<_i3.NumberTriviaModel> getLastNumberTrivia() =>
-      (super.noSuchMethod(
+  _i6.Future<_i3.NumberTriviaModel> getLastNumberTrivia() => (super.noSuchMethod(
         Invocation.method(
           #getLastNumberTrivia,
           [],
         ),
-        returnValue:
-            _i6.Future<_i3.NumberTriviaModel>.value(_FakeNumberTriviaModel_1(
+        returnValue: _i6.Future<_i3.NumberTriviaModel>.value(_FakeNumberTriviaModel_1(
           this,
           Invocation.method(
             #getLastNumberTrivia,
@@ -197,8 +174,7 @@ class MockNumberTriviaLocalDataSource extends _i1.Mock
       ) as _i6.Future<_i3.NumberTriviaModel>);
 
   @override
-  _i6.Future<void> cacheNumberTrivia(_i3.NumberTriviaModel? triviaToCache) =>
-      (super.noSuchMethod(
+  _i6.Future<void> cacheNumberTrivia(_i3.NumberTriviaModel? triviaToCache) => (super.noSuchMethod(
         Invocation.method(
           #cacheNumberTrivia,
           [triviaToCache],
@@ -433,14 +409,12 @@ class MockHttpCient extends _i1.Mock implements _i4.Client {
       ) as _i6.Future<_i14.Uint8List>);
 
   @override
-  _i6.Future<_i4.StreamedResponse> send(_i4.BaseRequest? request) =>
-      (super.noSuchMethod(
+  _i6.Future<_i4.StreamedResponse> send(_i4.BaseRequest? request) => (super.noSuchMethod(
         Invocation.method(
           #send,
           [request],
         ),
-        returnValue:
-            _i6.Future<_i4.StreamedResponse>.value(_FakeStreamedResponse_3(
+        returnValue: _i6.Future<_i4.StreamedResponse>.value(_FakeStreamedResponse_3(
           this,
           Invocation.method(
             #send,
