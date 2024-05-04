@@ -52,7 +52,7 @@ class TriviaControlsState extends State<TriviaControls> {
 
   void dispatchConcrete() {
     controller.clear();
-    BlocProvider.of<NumberTriviaBloc>(context).add(GetTriviaForConcreteNumberEvent(inputStr));
+    BlocProvider.of<NumberTriviaBloc>(context).add(ValidateUserInputEvent(inputStr));
   }
 
   void dispatchRandom() {

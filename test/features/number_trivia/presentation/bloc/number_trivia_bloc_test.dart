@@ -60,7 +60,7 @@ void main() {
           setUpMockInputConverterSuccess();
           when(mockGetConcreteNumberTriviaUsecase(const Params(number: tNumberParsed))).thenAnswer((_) async => const Right(tNumberTrivia));
           // ACT
-          bloc.add(const GetTriviaForConcreteNumberEvent(tNumberString));
+          bloc.add(const ValidateUserInputEvent(tNumberString));
           await untilCalled(inputConverter.stringToUnsignedInteger(tNumberString));
 
           // ASSERT
@@ -81,7 +81,7 @@ void main() {
           expectLater(bloc.stream, emitsInOrder(expected));
 
           // ACT
-          bloc.add(const GetTriviaForConcreteNumberEvent(tNumberString));
+          bloc.add(const ValidateUserInputEvent(tNumberString));
         },
       );
 
@@ -93,7 +93,7 @@ void main() {
           when(mockGetConcreteNumberTriviaUsecase(const Params(number: tNumberParsed))).thenAnswer((_) async => const Right(tNumberTrivia));
 
           // ACT
-          bloc.add(const GetTriviaForConcreteNumberEvent(tNumberString));
+          bloc.add(const GetTriviaForConcreteNumberEvent(tNumberParsed));
           await untilCalled(mockGetConcreteNumberTriviaUsecase(const Params(number: tNumberParsed)));
 
           // ASSERT
@@ -116,7 +116,7 @@ void main() {
           expectLater(bloc.stream, emitsInOrder(expected));
 
           // ACT
-          bloc.add(const GetTriviaForConcreteNumberEvent(tNumberString));
+          bloc.add(const GetTriviaForConcreteNumberEvent(tNumberParsed));
         },
       );
 
@@ -135,7 +135,7 @@ void main() {
           expectLater(bloc.stream, emitsInOrder(expected));
 
           // ACT
-          bloc.add(const GetTriviaForConcreteNumberEvent(tNumberString));
+          bloc.add(const GetTriviaForConcreteNumberEvent(tNumberParsed));
         },
       );
     },
