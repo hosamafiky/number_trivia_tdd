@@ -8,10 +8,10 @@ import '../../../../helper/test_helper.mocks.dart';
 
 void main() {
   late GetConcreteNumberTriviaUsecase usecase;
-  late MockNumberTriviaRepository mockNumberTriviaRepository;
+  late MockNumberTriviaRepositoryImpl mockNumberTriviaRepository;
 
   setUp(() {
-    mockNumberTriviaRepository = MockNumberTriviaRepository();
+    mockNumberTriviaRepository = MockNumberTriviaRepositoryImpl();
     usecase = GetConcreteNumberTriviaUsecase(mockNumberTriviaRepository);
   });
 

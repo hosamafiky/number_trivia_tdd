@@ -7,11 +7,11 @@ import 'package:number_trivia_tdd/features/number_trivia/domain/use_cases/get_ra
 import '../../../../helper/test_helper.mocks.dart';
 
 void main() {
-  late MockNumberTriviaRepository mockNumberTriviaRepository;
+  late MockNumberTriviaRepositoryImpl mockNumberTriviaRepository;
   late GetRandomNumberTriviaUsecase usecase;
 
   setUp(() {
-    mockNumberTriviaRepository = MockNumberTriviaRepository();
+    mockNumberTriviaRepository = MockNumberTriviaRepositoryImpl();
     usecase = GetRandomNumberTriviaUsecase(mockNumberTriviaRepository);
   });
 
