@@ -1,6 +1,6 @@
-import 'package:number_trivia_tdd/core/error/exceptions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../../core/error/exceptions.dart';
 import '../models/number_trivia_model.dart';
 
 const CACHED_NUMBER_TRIVIA = 'CACHED_NUMBER_TRIVIA';
