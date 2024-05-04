@@ -19,6 +19,7 @@ class TriviaControlsState extends State<TriviaControls> {
       children: <Widget>[
         TextField(
           controller: controller,
+          onTapOutside: (_) => FocusScope.of(context).unfocus(),
           keyboardType: TextInputType.number,
           decoration: const InputDecoration(
             border: OutlineInputBorder(),
